@@ -1,21 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Code } from 'lucide-react';
+import adminImg from '../assets/photo/AdminPicture.jpg';
+import customerImg from '../assets/photo/Customer Picture.jpg';
 
 const projectsData = [
   {
     title: "E-Commerce Platform",
     description: "A full-stack e-commerce platform featuring product listings, shopping cart, user authentication, and secure checkout. Built with modern web technologies.",
     image: "E-Commerce Project",
+    isPlaceholder: true,
     tags: ["React", "Laravel", "MySQL"],
     github: "#",
     live: "#"
   },
   {
-    title: "Event Management System",
-    description: "A comprehensive system to create, manage, and register for events. Includes dashboards for both organizers and attendees.",
-    image: "Event Management",
-    tags: ["Django", "Python", "PostgreSQL"],
+    title: "Event & Ticketing - Admin Dashboard",
+    description: "A robust admin platform for organizers to create events, manage ticket categories and inventory, track booking reports, and handle user check-ins. Integrated with Google Auth for secure access and MySQL Workbench for database modeling.",
+    image: adminImg,
+    isPlaceholder: false,
+    tags: ["Python", "Django", "MySQL", "Google Auth"],
+    github: "#",
+    live: "#"
+  },
+  {
+    title: "Event Portal & KHQR Booking",
+    description: "A customer-facing application allowing users to browse events, book tickets, and pay instantly via KHQR (Bakong integration) to receive a secure E-ticket. Built with React.js and styled with Material UI.",
+    image: customerImg,
+    isPlaceholder: false,
+    tags: ["React.js", "Material UI", "KHQR Payment", "Bakong"],
     github: "#",
     live: "#"
   }
@@ -42,8 +55,17 @@ const Projects = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <div className="project-image">
-                {project.image}
+              <div className="project-image" style={{ overflow: 'hidden' }}>
+                {project.isPlaceholder ? (
+                  <span>{project.image}</span>
+                ) : (
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} 
+                    className="project-img-hover" 
+                  />
+                )}
               </div>
               <div className="project-info">
                 <h3>{project.title}</h3>

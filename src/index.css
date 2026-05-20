@@ -436,6 +436,11 @@ button {
   justify-content: center;
   color: var(--text-muted);
   font-size: 1.2rem;
+  overflow: hidden;
+}
+
+.project-card:hover .project-img-hover {
+  transform: scale(1.06);
 }
 
 .project-info {
