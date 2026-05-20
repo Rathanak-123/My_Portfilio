@@ -11,7 +11,7 @@ const projectsData = [
     image: adminImg,
     isPlaceholder: false,
     tags: ["Python", "Django", "MySQL", "Google Auth"],
-    github: "#",
+    github: "https://github.com/Rathanak-123/EMS_Backend",
     live: "#"
   },
   {
@@ -20,7 +20,7 @@ const projectsData = [
     image: customerImg,
     isPlaceholder: false,
     tags: ["React.js", "Material UI", "KHQR Payment", "Bakong"],
-    github: "#",
+    github: "https://github.com/Rathanak-123/Event_MS_UI",
     live: "#"
   }
 ];
