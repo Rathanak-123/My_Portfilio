@@ -6,15 +6,6 @@ import customerImg from '../assets/photo/Customer Picture.jpg';
 
 const projectsData = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce platform featuring product listings, shopping cart, user authentication, and secure checkout. Built with modern web technologies.",
-    image: "E-Commerce Project",
-    isPlaceholder: true,
-    tags: ["React", "Laravel", "MySQL"],
-    github: "#",
-    live: "#"
-  },
-  {
     title: "Event & Ticketing - Admin Dashboard",
     description: "A robust admin platform for organizers to create events, manage ticket categories and inventory, track booking reports, and handle user check-ins. Integrated with Google Auth for secure access and MySQL Workbench for database modeling.",
     image: adminImg,
